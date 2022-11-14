@@ -1,18 +1,31 @@
 import { Routes, Route } from "react-router-dom";
-import Home from "./Pages/Home/Home";
-import About from "./Pages/About/About";
-import FicheLogement from "./Pages/FicheLogement/FicheLogement";
-import Error from "./Pages/Error/Error"
+import { createGlobalStyle } from "styled-components";
+import Home from "./Pages/Home/Home.jsx";
+import About from "./Pages/About/About.jsx";
+import FicheLogement from "./Pages/FicheLogement/FicheLogement.jsx";
+import Error from "./Pages/Error/Error.jsx";
+import Header from "./Components/Header/Header.jsx";
+
+const GlobalStyled = createGlobalStyle`
+* {
+    font-family: 'Montserrat', Helvetica, sans-serif;
+}
+body {
+    margin: 0;
+}
+`
 
 function App() {
     return (
-        <div>
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/logement" element={<FicheLogement />} />
-                <Route path="*" element={<Error />} />
-            </Routes>
+        <div className="App">
+            <GlobalStyled />
+                <Header />
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route path="/about" element={<About />} />
+                        <Route path="/logement" element={<FicheLogement />} />
+                        <Route path="*" element={<Error />} />
+                    </Routes>
         </div>
     )
 }

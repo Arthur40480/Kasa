@@ -1,0 +1,18 @@
+.navList{
+    display: flex;
+    list-style: none;
+    font-size: 24px;  
+}
+
+.linkNav {
+    display: block;
+    padding-left: 90px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #FF6060;
+    
+}
+
+.linkNav:hover {
+    text-decoration: underline;
+}
