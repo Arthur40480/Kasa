@@ -1,10 +1,10 @@
-.navList{
+.nav_list{
     display: flex;
     list-style: none;
     font-size: 24px;  
 }
 
-.linkNav {
+.nav_link {
     display: block;
     padding-left: 90px;
     cursor: pointer;
@@ -13,6 +13,6 @@
     
 }
 
-.linkNav:hover {
+.nav_link:hover {
     text-decoration: underline;
 }

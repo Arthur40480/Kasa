@@ -4,9 +4,9 @@ import "./Nav.css";
 function Nav() {
     return (
         <nav>
-            <ul className="navList">
-                <li><Link to="/" className="linkNav">Accueil</Link></li>
-                <li><Link to="/about" className="linkNav"> A Propos</Link></li>
+            <ul className="nav_list">
+                <li><Link to="/" className="nav_link">Accueil</Link></li>
+                <li><Link to="/about" className="nav_link"> A Propos</Link></li>
             </ul>
         </nav>
     )
