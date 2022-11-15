@@ -1,0 +1,30 @@
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 2% 0 1% 0;
+    width: 100%;
+    height: 223px;
+}
+
+.banner_div {
+    width: 90%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 25px; 
+    
+}
+
+.banner_img {
+    width: 100%;
+    height: 100%;
+    filter : brightness(50%);  
+}
+
+.banner_txt {
+    position: absolute;
+    font-size: 48px;
+    color: white;
+}
