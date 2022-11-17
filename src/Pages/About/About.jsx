@@ -1,6 +1,8 @@
+import Bannerabout from "../../Components/BannerAbout/BannerAbout";
+
 function About() {
     return (
-        <div> A propos </div>
+        <Bannerabout />
     )
 }
 
