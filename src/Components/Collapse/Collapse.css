@@ -52,11 +52,11 @@ article {
 .collapse_txt {
     background-color: var(--secondary-color);
     margin: 0 0 2% 0;
-    padding: 20px 10px 10px 10px;
+    padding: 20px 10px 15px 10px;
     border-radius: 0 0 5px 5px;
     font-weight: 400;
     font-size: 24px;
     color: var(--primary-color);
     animation: progressive 1s ease-in-out both;
-    line-height: 142%;
+    line-height: 34px;
 }

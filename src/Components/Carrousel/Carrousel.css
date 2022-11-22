@@ -1,0 +1,55 @@
+.section_carrousel {
+    margin: 2rem 4rem 2rem 4rem;
+    position: relative;
+    height: 415px;   
+}
+
+.img_container {
+    width: 100%;
+    height: 415px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.img_carrousel {
+    height: 415px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+  }
+
+.previous_arrow {
+    position: absolute;
+    left: 23px;
+    top: 156px;
+    cursor: pointer;
+  }
+
+  .previous_arrow_none {
+    display: none
+  }
+
+.next_arrow {
+    position: absolute;
+    right: 23px;
+    top: 156px;
+    cursor: pointer;
+}
+
+.next_arrow_none {
+    display: none;
+}
+
+.slip_carrousel {
+    position: absolute;
+    color: var(--secondary-color);
+    bottom: 25px;
+    left: 610px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.slip_carrousel_none {
+    display: none;
+}

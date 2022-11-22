@@ -7,7 +7,7 @@ import Card from "../../Components/Card/Card";
 import "./Home.css";
 
 function Home() {
-  const [ lodgings ] = useState(Lodgings);
+  const [ lodgings ] = useState(Lodgings); // Hook permettant d'avoir des variables d'état dans les composants fonctionnels.
 
   return (
   <main className="home_main">

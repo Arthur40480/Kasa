@@ -5,9 +5,9 @@
     height: 340px;
     border-radius: 10px;
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    margin-bottom: 2rem;
+    flex-direction: column;
+    overflow: hidden;
+    margin: 30px 25px;
     background: linear-gradient(
       180deg,
       rgba(255, 4, 4, 0) 0%,
@@ -29,14 +29,11 @@
 }
 
 .card_title {
-    position: absolute;
     width: 310px;
     padding-left: 1rem;
-    padding-top: 17.5rem;
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
-    line-height: 150%;
+    line-height: 142%;
     color: #ffffff;
-
 }
