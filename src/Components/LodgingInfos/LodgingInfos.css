@@ -1,0 +1,75 @@
+@import "./../../Style/Utils/Variables.css";
+
+.article_infos {
+    display: flex;
+    flex-direction: column;
+    
+}
+.title_infos {
+    width: auto;
+    color: var(--primary-color);
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 51px;
+    margin: 0;
+}
+
+.location_infos {
+    margin: 0 0 25px 0;
+    color: var(--primary-color);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 25px;
+}
+
+.tags_container {
+    display: flex;
+}
+
+.tags_infos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 10px 0 0;
+    width: 30%;
+    height: 25px;
+    line-height: 142%;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 10px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.host_div {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.host_name {
+    margin-right: 10px;
+    width: min-content;
+    color: var(--primary-color);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 25px;
+}
+
+.host_picture {
+    width: 64px;
+    height: 64px;
+    border-radius: 100%;
+    object-fit: cover;
+    background-color: #c4c4c4;
+}
+
+.rating_div {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.rating_stars {
+    margin: 10px 0 0 10px;
+
+}

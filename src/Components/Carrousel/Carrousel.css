@@ -45,7 +45,7 @@
     position: absolute;
     color: var(--secondary-color);
     bottom: 25px;
-    left: 610px;
+    left: 50%;
     font-size: 18px;
     font-weight: 500;
 }

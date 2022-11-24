@@ -8,13 +8,15 @@ function About() {
     return (
         <section className="collapse_container">
             <Bannerabout />
-            { AboutDatas.map((datas, id) => (
-                <Collapse 
-                key={id}
-                title={datas.title}
-                texte={datas.text}
-                />
+            <div className="collapse_div">
+                { AboutDatas.map((datas, id) => (
+                    <Collapse 
+                    key={id}
+                    title={datas.title}
+                    texte={datas.text}
+                    />
             ))}
+            </div>
         </section>
     )
 }

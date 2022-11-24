@@ -1,0 +1,25 @@
+.lodgings_infos_container {
+    display: flex;
+    margin: 0 4rem;
+}
+
+.lodging_collapse_container {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    margin: 0 4rem;
+}
+
+.collapse_description {
+    width: 50%;
+}
+
+.collapse_equipments {
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+}
+
+.list_equipments {
+    list-style-type: none;
+}
