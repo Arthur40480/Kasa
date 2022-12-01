@@ -17,6 +17,7 @@
 }
 
 .error_second_txt {
+    margin: 0 10%;
     font-size: 36px;
     text-align: center;
 }
@@ -31,4 +32,36 @@
 
 .error_link:hover {
     cursor: pointer;
+}
+
+/* Media queries tablet */
+
+@media (max-width: 768px) {
+
+    .error_first_txt {
+        font-size: 160px;
+    }
+    .error_second_txt {
+        font-size: 24px;
+    }
+
+    .error_link {
+        font-size: 18px;
+    }
+}
+
+/* Media queries portable */
+
+@media (max-width: 480px) {
+    
+    .error_first_txt {
+        font-size: 110px;
+    }
+    .error_second_txt {
+        font-size: 18px;
+    }
+
+    .error_link {
+        font-size: 14px;
+    }
 }

@@ -18,5 +18,24 @@
 }
 
 .footer_txt {
+    font-size: 24px;
     color: var(--tertiary-color);
+}
+
+/* Media queries tablet */
+
+@media (max-width: 768px) {
+
+    .footer_txt {
+        font-size: 18px; 
+    }
+}
+
+/* Media queries portable */
+
+@media (max-width: 480px) {
+
+    .footer_txt {
+        font-size: 12px; 
+    }
 }

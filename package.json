@@ -1,6 +1,9 @@
 {
-  "name": "kasa",
+  "name": "@Arthur40480/Kasa",
   "version": "0.2.0",
+  "description": "Projet 7 du parcours développeur Web : Créez une application web de location immobilière avec React",
+  "author": "Gibert Arthur",
+  "license": "Apache-2.0",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.2.1",
     "@fortawesome/free-solid-svg-icons": "^6.2.1",

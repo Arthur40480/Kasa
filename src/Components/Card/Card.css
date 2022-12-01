@@ -1,5 +1,19 @@
 @import"./../../Style/Utils/Variables.css";
 
+.gallery {
+    margin: 2rem 4rem 2rem 4rem;
+    padding: 2rem ;
+    background-color: var(--secondary-color);
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card_link {
+    text-decoration: none;
+}
+
 .card_figure {
     width: 340px;
     height: 340px;
@@ -29,6 +43,7 @@
 }
 
 .card_title {
+    display: flex;
     width: 310px;
     padding-left: 1rem;
     font-style: normal;
@@ -37,3 +52,28 @@
     line-height: 142%;
     color: #ffffff;
 }
+
+.card_title strong {
+    padding-top: 10px;
+}
+
+/* Media queries tablet */
+
+@media (max-width: 768px) {
+
+    .gallery {
+        margin: 0;
+        padding-top: 0;
+        background-color: var(--tertiary-color);
+    }
+
+    .card_title {
+        width: 290px;
+        line-height: 100%;
+    }
+
+    .card_title strong {
+        font-size: 16px;
+    }
+}
+

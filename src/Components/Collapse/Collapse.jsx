@@ -6,7 +6,7 @@ function Collapse({title, texte}) {
   const [ isOpen, setIsOpen ] = useState(false);
   
   return isOpen ? (
-    <article>
+    <article className="collapse_article">
       <div className="collapse_window">
         <h4 className="collapse_title">{title}</h4>
         <img  src={CollapseButton} 
@@ -17,7 +17,7 @@ function Collapse({title, texte}) {
       <div className="collapse_txt">{texte}</div>
     </article>
   ) : (
-    <article>
+    <article className="collapse_article">
       <div className="collapse_window">
         <h4 className="collapse_title">{title}</h4>
         <img  src={CollapseButton} 

@@ -5,27 +5,27 @@ import AboutDatas from "../../aboutDatas.json";
 import "./About.css";
 
 function About() {
-    return (
-        <section className="collapse_container">
-            <Bannerabout />
-            <div className="collapse_div">
-                { AboutDatas.map((datas, id) => (
-                    <Collapse 
-                    key={id}
-                    title={datas.title}
-                    texte={datas.text}
-                    />
-            ))}
-            </div>
-        </section>
-    )
+  return (
+    <section className="collapse_container">
+      <Bannerabout />
+      <div className="collapse_div">
+        { AboutDatas.map((datas, id) => (
+          <Collapse 
+            key={id}
+            title={datas.title}
+            texte={datas.text}
+          />
+        ))}
+      </div>
+    </section>
+  )
 }
 
 // Proptype permet de définir le type de chaques props
 Collapse.propTypes = {
-    key: PropTypes.string,
-    title: PropTypes.string,
-    texte: PropTypes.string,
-  }
+  key: PropTypes.string,
+  title: PropTypes.string,
+  texte: PropTypes.string,
+}
 
 export default About;

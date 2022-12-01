@@ -8,63 +8,62 @@ import "./FicheLogement.css";
 
 function FicheLogement() {
 
-    const params = useParams();     // Hook permettant de récupérer les paramètres de route.
-    const navigate = useNavigate(); // Hook donnant accès à l'objet de navigation.
+  const params = useParams();     // Hook permettant de récupérer les paramètres de route.
+  const navigate = useNavigate(); // Hook donnant accès à l'objet de navigation.
 
-    const product = 
-        Lodgings.find((product) => params.id === product.id);
-        if(!product) {
-            navigate("/error");
-        };
+  const product = 
+    Lodgings.find((product) => params.id === product.id);
+    if(!product) {
+      navigate("/error");
+    };
 
-    const key = product.id;
-    const pictures = product.pictures;
-    const title = product.title;
-    const location = product.location;
-    const tags = product.tags;
-    const host = product.host;
-    const rating = product.rating;
-    const description = product.description;
-    const equipments = product.equipments;
+  const key = product.id;
+  const pictures = product.pictures;
+  const title = product.title;
+  const location = product.location;
+  const tags = product.tags;
+  const host = product.host;
+  const rating = product.rating;
+  const description = product.description;
+  const equipments = product.equipments;
     
 
-    return (
-      <main>
-        <Carrousel 
-            key={key} 
-            pictures={pictures} 
+  return (
+    <main className="lodging_main">
+      <Carrousel 
+        key={key} 
+        pictures={pictures} 
+      />
+      <section className="lodgings_infos_container">
+        <LodgingInfos 
+          key={key} 
+          product={product}
+          title={title} 
+          location={location} 
+          tags={tags}
+          host={host}
+          rating={rating}
         />
-        <section className="lodgings_infos_container">
-          <LodgingInfos 
-            key={key} 
-            product={product}
-            title={title} 
-            location={location} 
-            tags={tags}
-            host={host}
-            rating={rating}
+      </section>
+      <section className="lodging_collapse_container">
+        <div className="collapse_description">
+          <Collapse
+            title="Description"
+            texte={description}
           />
-        </section>
-        <section className="lodging_collapse_container">
-          <div className="collapse_description">
-            <Collapse
-              title="Description"
-              texte={description}
-            />
-          </div>
-          <div className="collapse_equipments">
-            <Collapse
-              title="Equipements"
-              texte={equipments.map((infos, index) => (
-                <li className="list_equipments">{infos}</li>
-              )
-            )}
-            />
-          </div>
-        </section>
-      </main>
-        
-    )
+        </div>
+        <div className="collapse_equipments">
+          <Collapse
+            title="Equipements"
+            texte={equipments.map((infos, index) => (
+              <li className="list_equipments">{infos}</li>
+            )
+          )}
+          />
+        </div>
+      </section>
+    </main>
+  )
 }
 
 // Proptype permet de définir le type de chaques props
@@ -82,5 +81,9 @@ LodgingInfos.protoTypes = {
   host: PropTypes.string,
   rating: PropTypes.number,
 };
+
+Collapse.prototype = {
+  texte: PropTypes.string,
+}
 
 export default FicheLogement;

@@ -7,14 +7,4 @@
     margin-top: 4%;
 }
 
-.gallery {
-    margin: 2rem 4rem 2rem 4rem;
-    padding: 2rem ;
-    background-color: #f7f7f7;
-    border-radius: 25px;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
 
