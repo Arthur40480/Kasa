@@ -1,0 +1,10 @@
+@import"./../../Style/Utils/Variables.css";
+
+.home_main{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-top: 4%;
+}
+
+

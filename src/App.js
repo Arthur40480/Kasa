@@ -9,27 +9,28 @@ import Footer from "./Components/Footer/Footer.jsx";
 
 const GlobalStyled = createGlobalStyle`
 * {
-    font-family: 'Montserrat', Helvetica, sans-serif;
+  font-family: 'Montserrat', Helvetica, sans-serif;
 }
+
 body {
-    margin: 0;
+  margin: 0;
 }
 `
 
 function App() {
-    return (
-        <div className="App">
-            <GlobalStyled />
-                <Header />
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/about" element={<About />} />
-                    <Route path="/logement" element={<FicheLogement />} />
-                    <Route path="*" element={<Error />} />
-                </Routes>
-                <Footer />
-        </div>
-    )
+  return (
+    <div className="App">
+      <GlobalStyled />
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/logement/:id" element={<FicheLogement />} />
+        <Route path="*" element={<Error />} />
+      </Routes>
+      <Footer />
+    </div>
+  )
 }
 
 export default App;
