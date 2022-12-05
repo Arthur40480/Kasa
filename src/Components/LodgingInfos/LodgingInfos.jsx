@@ -39,7 +39,7 @@ function LodgingInfos({ product, title, location, tags, host, rating }) {
         </h2>
         <div className="tags_container">
           {tags.map((tagsData) => (
-            <p className="tags_infos">{tagsData}</p>
+            <p key={tagsData+tags.id} className="tags_infos">{tagsData}</p>
           ))}
         </div>
       </article>

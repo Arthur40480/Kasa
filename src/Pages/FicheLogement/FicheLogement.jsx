@@ -1,20 +1,23 @@
+import Error404 from "../../Components/Error404/Error404";
 import Carrousel from "../../Components/Carrousel/Carrousel";
 import LodgingInfos from "../../Components/LodgingInfos/LodgingInfos";
 import Collapse from "../../Components/Collapse/Collapse";
 import Lodgings from "../../logements.json";
-import { useParams, useNavigate } from "react-router-dom";
-import PropTypes from "prop-types";
+import { useParams } from "react-router-dom";
 import "./FicheLogement.css";
 
 function FicheLogement() {
 
   const params = useParams();     // Hook permettant de récupérer les paramètres de route.
-  const navigate = useNavigate(); // Hook donnant accès à l'objet de navigation.
-
   const product = 
     Lodgings.find((product) => params.id === product.id);
-    if(!product) {
-      navigate("/error");
+    let idtmp = Lodgings.find((product) => params.id === product.id);
+    console.log (idtmp)
+    if (idtmp===undefined) {
+      console.log ("Mauvais ID")
+      return (
+        <Error404 />
+    )
     };
 
   const key = product.id;
@@ -55,7 +58,7 @@ function FicheLogement() {
         <div className="collapse_equipments">
           <Collapse
             title="Equipements"
-            texte={equipments.map((infos, index) => (
+            texte={equipments.map((infos) => (
               <li className="list_equipments">{infos}</li>
             )
           )}
@@ -64,26 +67,6 @@ function FicheLogement() {
       </section>
     </main>
   )
-}
-
-// Proptype permet de définir le type de chaques props
-Carrousel.propTypes = {
-  key: PropTypes.string,
-  pictures: PropTypes.string,
-};
-
-LodgingInfos.protoTypes = {
-  key: PropTypes.string,
-  product: PropTypes.string,
-  title: PropTypes.string,
-  location: PropTypes.string,
-  tags: PropTypes.string,
-  host: PropTypes.string,
-  rating: PropTypes.number,
-};
-
-Collapse.prototype = {
-  texte: PropTypes.string,
 }
 
 export default FicheLogement;
