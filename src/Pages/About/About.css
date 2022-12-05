@@ -15,6 +15,11 @@
     margin-bottom: 3%;
 }
 
+.collapse_div > div {
+    display: flex;
+    width: 100%;
+}
+
 /* Media queries tablet */
 
 @media (max-width: 768px) {
